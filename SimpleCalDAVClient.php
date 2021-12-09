@@ -24,7 +24,7 @@
  * All of those functions - except the last one - are realy easy to use, self-explanatory and are
  * deliverd with a big innitial comment, which explains all needed arguments and the return values.
  *
- * This library is heavily based on AgenDAV caldav-client-v2.php by Jorge López Pérez <jorge@adobo.org> which
+ * This library is heavily based on AgenDAV caldav-client-v2.php by Jorge LÃ³pez PÃ©rez <jorge@adobo.org> which
  * again is heavily based on DAViCal caldav-client-v2.php by Andrew McMillan <andrew@mcmillan.net.nz>.
  * Actually, I hardly added any features. The main point of my work is to make everything straight
  * forward and easy to use. You can use simpleCalDAV whithout a deeper understanding of the
@@ -32,7 +32,7 @@
  *
  * Requirements of this library are
  *   - The php extension cURL ( http://www.php.net/manual/en/book.curl.php )
- *   - From Andrew’s Web Libraries: ( https://github.com/andrews-web-libraries/awl )
+ *   - From Andrewâ€™s Web Libraries: ( https://github.com/andrews-web-libraries/awl )
  *      - XMLDocument.php
  *      - XMLElement.php
  *      - AWLUtilities.php
@@ -64,11 +64,11 @@ class SimpleCalDAVClient {
 	 * @throws CalDAVException
 	 * For debugging purposes, just sorround everything with try { ... } catch (Exception $e) { echo $e->__toString(); }
 	 */
-	function connect ( $url, $user, $pass )
+	function connect ( $url, $user, $pass, $options = array() )
 	{
 
 		//  Connect to CalDAV-Server and log in
-		$client = new CalDAVClient($url, $user, $pass);
+		$client = new CalDAVClient($url, $user, $pass, $options);
 
 		// Valid CalDAV-Server? Or is it just a WebDAV-Server?
 		if( ! $client->isValidCalDAVServer() )
